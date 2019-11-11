@@ -18,8 +18,8 @@ let projectName;
 
 const program = new commander.Command(packageJson.name)
   .version(`${packageJson.version}\n${debug ? chalk.cyan('@local') : ''}`)
-  .arguments('<project-directory>')
-  .usage(`${chalk.green('<project-directory>')} [options]`)
+  .arguments('<project-name>')
+  .usage(`${chalk.green('<project-name>')} [options]`)
   .action(name => {
     projectName = name;
   })
@@ -37,7 +37,7 @@ const program = new commander.Command(packageJson.name)
     )*/
   .allowUnknownOption()
   .on('--help', () => {
-    console.log(`    Only ${chalk.green('<project-directory>')} is required.`);
+    console.log(`    Only ${chalk.green('<project-name>')} is required.`);
     console.log();
     console.log(
       `    A custom ${chalk.cyan('--umi-version')} can be one of:`,
@@ -126,7 +126,7 @@ if (typeof projectName === 'undefined') {
   console.log(projectName);
   console.error('Please specify the project directory:');
   console.log(
-    `  ${chalk.cyan(program.name())} ${chalk.green('<project-directory>')}`,
+    `  ${chalk.cyan(program.name())} ${chalk.green('<project-name>')}`,
   );
   console.log();
   console.log('For example:');

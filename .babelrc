@@ -1,0 +1,10 @@
+{
+  "presets": [
+    "typescript",
+    ["env", {
+      "targets": {
+        "node": "current"
+      }
+    }]
+  ]
+}
