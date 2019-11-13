@@ -36,7 +36,7 @@ const config: IConfig =  {
             context.resourcePath.includes('node_modules') ||
             context.resourcePath.includes('ant.design.pro.less') ||
             context.resourcePath.includes('global.less') ||
-            /_less\/global.less$/.test(context.resourcePath)
+            /(less|_)\S+.less$/.test(context.resourcePath)
         ) {
             return localName;
         }
