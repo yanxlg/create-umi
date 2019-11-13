@@ -47,7 +47,8 @@
     "create-umi": "^0.19.0",
     "babel-register": "^6.26.0",
     "babel-preset-env": "^1.7.0",
-    "cross-spawn": "^7.0.1"
+    "cross-spawn": "^7.0.1",
+    "extend2": "^1.0.0"
   },
   "devDependencies": {
     "@types/jest": "^24.0.19",

@@ -123,7 +123,6 @@ if (program.info) {
 }
 
 if (typeof projectName === 'undefined') {
-  console.log(projectName);
   console.error('Please specify the project directory:');
   console.log(
     `  ${chalk.cyan(program.name())} ${chalk.green('<project-name>')}`,
