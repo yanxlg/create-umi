@@ -31,25 +31,19 @@ const config: IConfig =  {
       _$: string,
       localName: string,
     ) => {
-        if (
-            context.resourcePath.includes('node_modules') ||
-            context.resourcePath.includes('ant.design.pro.less') ||
-            context.resourcePath.includes('global.less') ||
-            /(less|_)\S+.less$/.test(context.resourcePath)
-        ) {
-            return localName;
+        const { resourcePath } = context;
+        // src下以_开头的文件进行scope转换，其他文件均不进行scope转换
+        if (/_[a-zA-Z\.\-_0-9]+\.less$/.test(resourcePath)) {
+            const match = resourcePath.match(/src(.*)/);
+            if (match && match[1]) {
+                const hash = shajs('sha256')
+                    .update(resourcePath)
+                    .digest('hex')
+                    .substr(0, 8); //最大长度
+                return `${localName.replace(/([A-Z])/g, '-$1').toLowerCase()}_${hash}`;
+            }
         }
-        // scope classNa名称生成规则
-        const match = context.resourcePath.match(/src(.*)/);
-
-        if (match && match[1]) {
-            const hash = shajs('sha256')
-                .update(context.resourcePath)
-                .digest('hex')
-                .substr(0, 8); //最大长度
-            return `${localName.replace(/([A-Z])/g, '-$1').toLowerCase()}_${hash}`;
-        }
-          return localName;
+        return localName;
     },
   },<% } %>
   routes: [
