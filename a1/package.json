@@ -1,0 +1,46 @@
+{
+  "name": "a1",
+  "private": true,
+  "scripts": {
+    "analyze": "cross-env ANALYZE=1 umi build",
+    "build": "umi build",
+    "deploy": "cross-env ANT_DESIGN_PRO_ONLY_DO_NOT_USE_IN_YOUR_PRODUCTION=site npm run site && npm run gh-pages",
+    "fetch:blocks": "pro fetch-blocks && npm run prettier",
+    "format-imports": "cross-env import-sort --write '**/*.{js,jsx,ts,tsx}'",
+    "gh-pages": "cp CNAME ./dist/ && gh-pages -d dist",
+    "i18n-remove": "pro i18n-remove --locale=zh-CN --write",
+    "lint": "npm run lint:js && npm run lint:style && npm run lint:prettier",
+    "lint-staged": "lint-staged",
+    "lint-staged:js": "eslint --ext .js,.jsx,.ts,.tsx ",
+    "lint:fix": "eslint --fix --cache --ext .js,.jsx,.ts,.tsx --format=pretty ./src && npm run lint:style",
+    "lint:js": "eslint --cache --ext .js,.jsx,.ts,.tsx --format=pretty ./src",
+    "lint:prettier": "check-prettier lint",
+    "lint:style": "stylelint --fix \"src/**/*.less\" --syntax less",
+    "prettier": "prettier -c --write \"**/*\"",
+    "start": "umi dev",
+    "start:no-mock": "cross-env MOCK=none umi dev",
+    "test": "umi test",
+    "test:all": "node ./tests/run-tests.js",
+    "test:component": "umi test ./src/components",
+    "ui": "umi ui"
+  },
+  "lint-staged": {
+    "*.{js,jsx}": ["eslint --fix", "git add"],
+    "*.{ts,tsx}": ["tslint --fix", "git add"]
+  },
+  "dependencies": { "react": "^16.8.6", "react-dom": "^16.8.6" },
+  "devDependencies": {
+    "@types/node": "^12.0.12",
+    "@types/react": "^16.8.6",
+    "@types/react-dom": "^16.9.4",
+    "@typescript-eslint/eslint-plugin": "^1.11.0",
+    "@typescript-eslint/parser": "^1.11.0",
+    "babel-eslint": "^9.0.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "umi": "^2.11.3",
+    "umi-plugin-react": "^1.8.0",
+    "umi-types": "^0.2.0"
+  },
+  "engines": { "node": ">=8.0.0" }
+}

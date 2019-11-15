@@ -1,5 +1,7 @@
 import { IConfig } from 'umi-types';
 
+const shajs = require('sha.js');
+
 // ref: https://umijs.org/config/
 const config: IConfig =  {
   treeShaking: true,
@@ -44,12 +46,11 @@ const config: IConfig =  {
         const match = context.resourcePath.match(/src(.*)/);
 
         if (match && match[1]) {
-            const antdProPath = match[1].replace('.less', '');
-            const arr = slash(antdProPath)
-                .split('/')
-                .map((a: string) => a.replace(/([A-Z])/g, '-$1'))
-                .map((a: string) => a.toLowerCase());
-            return `antd-pro${arr.join('-')}-${localName}`.replace(/--/g, '-');
+            const hash = shajs('sha256')
+                .update(context.resourcePath)
+                .digest('hex')
+                .substr(0, 8); //最大长度
+            return `${localName.replace(/([A-Z])/g, '-$1').toLowerCase()}_${hash}`;
         }
           return localName;
     },
@@ -64,7 +65,7 @@ const config: IConfig =  {
       dll: <% if (reactFeatures.includes('dll')) { %>true<% } else { %>false<% } %>,
       <% if (reactFeatures.includes('locale')) { %>locale: {
         enable: true,
-        default: 'en-US',
+        default: 'zh-CN',
       },<% } %>
       routes: {
         exclude: [<% if (reactFeatures.includes('dva')) { %>
