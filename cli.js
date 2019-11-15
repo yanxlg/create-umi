@@ -1,3 +1,6 @@
+#!/usr/bin/env node
+
+// 第一行必须存在，否则安装后.bin中可执行脚本会报错
 'use strict';
 
 const semver = require('semver');
