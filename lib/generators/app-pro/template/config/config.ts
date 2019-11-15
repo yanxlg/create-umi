@@ -1,19 +1,16 @@
 import { IConfig } from 'umi-types';
+import theme from './theme.config';
 
 const shajs = require('sha.js');
 
 // ref: https://umijs.org/config/
 const config: IConfig =  {
   treeShaking: true,
-  routes: [
-    {
-      path: '/',
-      component: '../layouts/index',
-      routes: [
-        { path: '/', component: '../pages/index' }
-      ]
-    }
-  ],
+  devtool: process.env.NODE_ENV !== 'production' ? 'source-map' : false,
+  theme: theme,
+  lessLoaderOptions: {
+    javascriptEnabled: true,
+  },
   <% if (ssr) { %>ssr: true,
   outputPath: '../public',
   // for dev server
@@ -55,6 +52,15 @@ const config: IConfig =  {
           return localName;
     },
   },<% } %>
+  routes: [
+    {
+        path: '/',
+        component: '../layouts/index',
+        routes: [
+            { path: '/', component: '../pages/index' }
+        ]
+    }
+  ],
   plugins: [
     // ref: https://umijs.org/plugin/umi-plugin-react.html
     ['umi-plugin-react', {
