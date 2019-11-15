@@ -44,7 +44,7 @@ gulp.task(
         shelljs.exec(`git push origin ${version}:${version}`);
         shelljs.exec('git push origin master:master');
         console.log('tagged');
-        shelljs.exec(`git add README.md`);
+        shelljs.exec(`git add -A`);
         shelljs.exec(`git commit -m "update version"`);
         shelljs.exec('git push origin master:master');
         console.log("update version");
