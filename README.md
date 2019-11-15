@@ -3,7 +3,7 @@
 Creates a VoVa application/plugin/block/library using the command line.
 
 
-[![NPM version](https://img.shields.io/badge/npm-v0.0.2-blue)](http://npm.gitvv.com/#/detail/create-vova)
+[![NPM version](https://img.shields.io/badge/npm-v0.0.3-blue)](http://npm.gitvv.com/#/detail/create-vova)
 
 ## Usage
 
