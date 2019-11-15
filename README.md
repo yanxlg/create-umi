@@ -1,6 +1,6 @@
 # create-umi
 
-Creates a UmiJS application/plugin/block/library using the command line.
+Creates a VoVa application/plugin/block/library using the command line.
 
 [![codecov](https://codecov.io/gh/umijs/create-umi/branch/master/graph/badge.svg)](https://codecov.io/gh/umijs/create-umi)
 [![NPM version](https://img.shields.io/npm/v/create-umi.svg?style=flat)](https://npmjs.org/package/create-umi)
@@ -11,11 +11,12 @@ Creates a UmiJS application/plugin/block/library using the command line.
 ## Usage
 
 ```bash
-$ yarn create umi [appName]
+$ yarn create vova [appName]
 ```
 
 ## Boilerplates
 
+* `app-pro` - Create project with a customized boilerplate, use together with umi block, support typescript and ssr.
 * `ant-design-pro` - Create project with a layout-only ant-design-pro boilerplate, use together with umi block.
 * `app ` - Create project with a simple boilerplate, support typescript.
 * `block ` - Create a umi block.
@@ -25,11 +26,12 @@ $ yarn create umi [appName]
 ## Usage Example
 
 ```bash
-$ yarn create umi
+$ yarn create vova
 
 ? Select the boilerplate type (Use arrow keys)
+❯ app-pro         - Create project with a customized boilerplate, use together with umi block, support typescript and ssr.
   ant-design-pro  - Create project with a layout-only ant-design-pro boilerplate, use together with umi block.
-❯ app             - Create project with a simple boilerplate, support typescript.
+  app             - Create project with a simple boilerplate, support typescript.
   block           - Create a umi block.
   library         - Create a library with umi.
   plugin          - Create a umi plugin.
@@ -38,9 +40,13 @@ $ yarn create umi
 
 ? What functionality do you want to enable? (Press <space> to select, <a> to toggle all, <i> to invert selection)
 ❯◯ antd
+ ◯ ant-design-pro
  ◯ dva
- ◯ code splitting
+ ◯ scope
+ ◯ locale
  ◯ dll
+ ◯ code splitting
+ ◯ internationalization
 
   create abc/package.json
   create abc/.gitignore
@@ -65,7 +71,7 @@ $ yarn create umi
 
 ## FAQ
 
-### `yarn create umi` command failed
+### `yarn create vova` command failed
 
 这个问题基本上都是因为没有添加 yarn global module 的路径到 PATH 环境变量引起的。
 
@@ -79,19 +85,19 @@ $ yarn global bin
 你也可以尝试用 npm，
 
 ```bash
-$ npm create umi
+$ npm create vova
 ```
 
-或者手动安装 create-umi，并执行他，
+或者手动安装 create-vova，并执行他，
 
 ```bash
-$ npm install create-umi -g
-$ create-umi
+$ npm install create-vova -g
+$ create-vova
 ```
 
 ## Questions & Suggestions
 
-Please open an issue [here](https://github.com/umijs/umi/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc).
+Please open an issue [here](https://g.gitvv.com/frontend/vv-cli-adp/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc).
 
 ## LICENSE
 

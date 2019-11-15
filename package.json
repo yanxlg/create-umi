@@ -1,14 +1,14 @@
 {
-  "name": "create-app",
+  "name": "create-vova",
   "version": "0.0.1",
-  "description": "Creates a UmiJS application using the command line.",
-  "homepage": "https://github.com/umijs/create-umi",
+  "description": "Creates a VoVa application using the command line.",
+  "homepage": "https://g.gitvv.com/frontend/vv-cli-adp",
   "bugs": {
-    "url": "https://github.com/umijs/create-umi/issues"
+    "url": "https://g.gitvv.com/frontend/vv-cli-adp/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/umijs/create-umi"
+    "url": "https://g.gitvv.com/frontend/vv-cli-adp"
   },
   "license": "MIT",
   "files": [
@@ -17,7 +17,7 @@
     "lib"
   ],
   "bin": {
-    "create-app": "cli.js"
+    "create-vova": "cli.js"
   },
   "scripts": {
     "prepublishOnly": "np --no-cleanup --yolo --no-publish",
@@ -58,7 +58,7 @@
     "umi-test": "^1.8.2"
   },
   "authors": [
-    "chencheng <sorrycc@gmail.com> (https://github.com/sorrycc)"
+    "yanxlg <xlyan@vova.hk.com> (https://github.com/yanxlg)"
   ],
   "engines": {
       "node":">=8.0.0"
