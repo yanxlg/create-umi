@@ -99,8 +99,3 @@ Please open an issue [here](https://g.gitvv.com/frontend/vv-cli-adp/issues?q=is%
 ## LICENSE
 
 MIT
-
-
-
-
-项目中创建自己的配置文件，支持从配置文件生成项目
