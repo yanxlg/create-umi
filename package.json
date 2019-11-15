@@ -1,6 +1,6 @@
 {
     "name": "create-vova",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "Creates a VoVa application using the command line.",
     "homepage": "https://g.gitvv.com/frontend/vv-cli-adp",
     "bugs": {
