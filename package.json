@@ -1,6 +1,5 @@
 {
     "name": "create-vova",
-    "private": true,
     "version": "0.0.1",
     "description": "Creates a VoVa application using the command line.",
     "homepage": "https://g.gitvv.com/frontend/vv-cli-adp",
@@ -21,7 +20,6 @@
         "create-vova": "cli.js"
     },
     "scripts": {
-        "prepublishOnly": "np --no-cleanup --yolo --no-publish",
         "test": "umi-test test/index.test.js",
         "cov": "umi-test test/index.test.js --coverage",
         "prettier": "prettier -c --write '**/*'",

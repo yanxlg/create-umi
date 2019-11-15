@@ -19,6 +19,7 @@ gulp.task(
         if (pkg.scripts['pre-publish']) {
             shelljs.exec(`npm run pre-publish`);
         }
+        console.log(args.join(' '));
         let ret = shelljs.exec(args.join(' ')).code;
         console.log('published');
         if (!ret) {
