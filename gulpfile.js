@@ -40,14 +40,14 @@ gulp.task(
     gulp.series('publish', done => {
         const { version } = pkg;
         shelljs.cd(process.cwd());
-        shelljs.exec(`git tag ${version}`);
-        shelljs.exec(`git push origin ${version}:${version}`);
-        shelljs.exec('git push origin master:master');
-        console.log('tagged');
         shelljs.exec(`git add -A`);
         shelljs.exec(`git commit -m "update version"`);
         shelljs.exec('git push origin master:master');
         console.log("update version");
+        shelljs.exec(`git tag ${version}`);
+        shelljs.exec(`git push origin ${version}:${version}`);
+        shelljs.exec('git push origin master:master');
+        console.log('tagged');
         done();
     })
 );
