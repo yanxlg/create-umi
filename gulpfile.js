@@ -10,9 +10,9 @@ gulp.task(
     'publish',
     gulp.series(done => {
         console.log('publishing');
-        const { version } = pkg;
-        const readMeFile = path.join(__dirname,"README.md");
-        fs.writeFileSync(readMeFile,fs.readFileSync(readMeFile,"utf-8").replace(/(npm-v)[\d\.]+(-blue)/,`$1${version}$2`));
+        // const { version } = pkg;
+        // const readMeFile = path.join(__dirname,"README.md");
+        // fs.writeFileSync(readMeFile,fs.readFileSync(readMeFile,"utf-8").replace(/(npm-v)[\d\.]+(-blue)/,`$1${version}$2`));
 
         const npm = argv.tnpm ? 'tnpm' : 'npm';
         const beta = !pkg.version.match(/^\d+\.\d+\.\d+$/);
