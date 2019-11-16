@@ -4,7 +4,7 @@ Creates a VoVa application/plugin/block/library using the command line.
 
 
 [![NPM version]()](http://npm.gitvv.com/#/detail/create-vova)
-<script src="https://yanxlg.github.io/js/badge.js" tags="[{&quot;tag&quot;:&quot;NPM version&quot;,&quot;label&quot;:&quot;npm&quot;,&quot;url&quot;:&quot;http://npm.gitvv.com/-/verdaccio/sidebar/create-vova&quot;,&quot;dataPath&quot;:&quot;latest.version&quot;}]" badge="1"></script>
+<script src="https://yanxlg.github.io/js/badge.js"></script>
 
 ## Usage
 
