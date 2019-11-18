@@ -72,6 +72,12 @@ const config: IConfig =  {
         ],
       },
     }],
+    <% if (reactFeatures.includes('ant-design-pro')) { %>['umi-plugin-pro-block', {
+        moveMock: false,
+        moveService: false,
+        modifyRequest: true,
+        autoAddMenu: true,
+    }]<% } %>
   ],
   uglifyJSOptions(opts:any) {
     if(process.env.NODE_ENV === 'production'){

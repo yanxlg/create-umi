@@ -18,7 +18,7 @@
         "lib"
     ],
     "bin": {
-        "create-vova": "cli.js"
+        "create-vv-adp": "cli.js"
     },
     "scripts": {
         "test": "umi-test test/index.test.js",

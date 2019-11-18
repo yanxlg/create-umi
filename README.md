@@ -1,14 +1,14 @@
-# create-vova
+# create-vv-adp
 
-Creates a VoVa application/plugin/block/library using the command line.
+Creates a vv-adp application/plugin/block/library using the command line.
 
 
-[![NPM version](https://img.shields.io/badge/npm-v0.0.6-beta.3-blue)](http://npm.gitvv.com/#/detail/create-vova)
+[![NPM version](https://img.shields.io/badge/npm-v0.0.6-beta.3-blue)](http://npm.gitvv.com/#/detail/create-vv-adp)
 
 ## Usage
 
 ```bash
-$ yarn create vova [appName]
+$ yarn create vv-adp [appName]
 ```
 
 ## Boilerplates
@@ -23,7 +23,7 @@ $ yarn create vova [appName]
 ## Usage Example
 
 ```bash
-$ yarn create vova
+$ yarn create vv-adp
 
 ? Select the boilerplate type (Use arrow keys)
 ❯ app-pro         - Create project with a customized boilerplate, use together with umi block, support typescript and ssr.
@@ -71,7 +71,7 @@ $ yarn create vova
 
 ## FAQ
 
-### `yarn create vova` command failed
+### `yarn create vv-adp` command failed
 
 这个问题基本上都是因为没有添加 yarn global module 的路径到 PATH 环境变量引起的。
 
@@ -85,14 +85,14 @@ $ yarn global bin
 你也可以尝试用 npm，
 
 ```bash
-$ npm create vova
+$ npm create vv-adp
 ```
 
-或者手动安装 create-vova，并执行他，
+或者手动安装 create-vv-adp，并执行他，
 
 ```bash
-$ npm install create-vova -g
-$ create-vova
+$ npm install create-vv-adp -g
+$ create-vv-adp
 ```
 
 ## Questions & Suggestions
