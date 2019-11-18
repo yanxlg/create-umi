@@ -45,6 +45,9 @@ $ yarn create vova
  ◯ code splitting
  ◯ internationalization
 
+? Which proxy url you want to rewrite？default:none
+? Do you want to use ssr render？default:N(y/N)
+
   create abc/package.json
   create abc/.gitignore
   create abc/.editorconfig
