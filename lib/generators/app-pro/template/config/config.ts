@@ -8,20 +8,15 @@ const config: IConfig =  {
   treeShaking: true,
   devtool: process.env.NODE_ENV !== 'production' ? 'source-map' : false,
   theme: theme,
+  ignoreMomentLocale: true,
   lessLoaderOptions: {
     javascriptEnabled: true,
   },
+  disableRedirectHoist:true,
   <% if (ssr) { %>ssr: true,
   outputPath: '../public',
   // for dev server
   publicPath: 'http://localhost:8000/',<% } %>
-  <% if (proxy) { %>proxy: {
-    '/api': {
-        target: '<%= proxy%>',
-            changeOrigin: true,
-            pathRewrite: { '^/api': '' },
-    },
-  },<% } %>
   <% if (reactFeatures.includes('scope')) { %>cssLoaderOptions: {
     modules: true,
     getLocalIdent: (
@@ -78,6 +73,21 @@ const config: IConfig =  {
       },
     }],
   ],
+  uglifyJSOptions(opts:any) {
+    if(process.env.NODE_ENV === 'production'){
+        opts.uglifyOptions.compress.warnings = false;
+        opts.uglifyOptions.compress.drop_debugger = true;
+        opts.uglifyOptions.compress.drop_console = true;
+    }
+    return opts;
+  },
+  <% if (proxy) { %>proxy: {
+    '/api': {
+        target: '<%= proxy%>',
+            changeOrigin: true,
+            pathRewrite: { '^/api': '' },
+    },
+  },<% } %>
 }
 
 export default config;
