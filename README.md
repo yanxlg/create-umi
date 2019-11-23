@@ -40,7 +40,6 @@ $ yarn create vv-adp
  ◯ ant-design-pro
  ◯ dva
  ◯ scope
- ◯ locale
  ◯ dll
  ◯ code splitting
  ◯ internationalization
