@@ -1,18 +1,14 @@
-import { EggPlugin } from 'egg';
-
-const plugin: EggPlugin = {
-    assets:{
-        enable: true,
-        package: 'egg-view-assets',
-    },
-    nunjucks:{
-        enable: true,
-        package: 'egg-view-nunjucks',
-    },
-    i18n:{
-        enable: true,
-        package: 'egg-i18n',
-    }
+exports.assets = {
+    enable: true,
+    package: 'egg-view-assets',
 };
 
-export default plugin;
+exports.nunjucks = {
+    enable: true,
+    package: 'egg-view-nunjucks',
+};
+
+exports.i18n = {
+    enable: true,
+    package: 'egg-i18n',
+};
