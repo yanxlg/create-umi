@@ -29,6 +29,7 @@
       "prettier": "prettier -c --write \"**/*\"",
       "now-build": "npm run prerender",
       "prerender": "npm run start && cross-env UMI_ENV=prerender umi build && egg-scripts stop",
+      "prestart": "ets && tsc -p tsconfig.egg.json",
       "start": "npm run build && egg-scripts start --port=7001 --daemon --title=egg-umi-ssr --env=prod",
       "stop": "egg-scripts stop --title=egg-umi-ssr",
       "test": "egg-bin test",
@@ -76,7 +77,8 @@
     "umi-plugin-react": "^1.9.0",
     "umi-types": "^0.3.12",
     "umi-utils": "^1.5.4",
-    "webstorm-disable-index": "^1.2.0"
+    "webstorm-disable-index": "^1.2.0",
+      "@types/jest": "^24.0.23"
   },
   "engines": {
     "node": ">=8.9.0"

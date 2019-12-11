@@ -1,6 +1,6 @@
 {
     "name": "create-vv-adp",
-    "version": "0.0.5",
+    "version": "0.0.5-alpha.1",
     "description": "Creates a vv-adp application using the command line.",
     "homepage": "https://g.gitvv.com/frontend/vv-cli-adp",
     "bugs": {
